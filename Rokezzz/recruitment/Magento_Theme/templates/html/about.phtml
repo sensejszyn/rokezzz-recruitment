@@ -1,0 +1,27 @@
+<?php
+/**
+ * @author Karol Kowalewski <sensejszyn@gmail.com>
+ */
+
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+
+?>
+
+<div class="about">
+    <h2 class="decorated-title decorated-title-center"><?= $block->escapeHtml(__('A word from the baker')) ?></h2>
+    <p class="about-description">
+        <?= $block->escapeHtml(__('I started this with a vision.')) ?>
+    </p>
+    <p class="about-description">
+        <?= $block->escapeHtml(__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')) ?>
+    </p>
+    <div class="about-baker">
+        <div class="about-baker-photo">
+            <img src="<?= $this->getViewFileUrl('images/baker.jpg'); ?>"
+                 title="<?= $block->escapeHtml(__('Bon Appétit baker')) ?>"/>
+        </div>
+    </div>
+    <h3 class="about-author">Karol Kowalewski</h3>
+</div>

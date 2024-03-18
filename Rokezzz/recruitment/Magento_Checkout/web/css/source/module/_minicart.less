@@ -1,0 +1,42 @@
+// /**
+//  * @author Karol Kowalewski <sensejszyn@gmail.com>
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .minicart-wrapper {
+        margin-left: 12px;
+
+        .showcart {
+            display: block;
+            position: relative;
+
+            svg {
+                display: block;
+            }
+
+            .counter.qty {
+                background: white;
+                font-size: 12px;
+                height: 18px;
+                padding: 0 3px;
+                box-sizing: border-box;
+                display: inline-block;
+                min-width: 18px;
+                text-align: center;
+                line-height: 1.5em;
+                border-radius: 18px;
+                position: absolute;
+                bottom: -6px;
+                right: -6px;
+
+                &.empty {
+                    display: none;
+                }
+            }
+        }
+    }
+}
