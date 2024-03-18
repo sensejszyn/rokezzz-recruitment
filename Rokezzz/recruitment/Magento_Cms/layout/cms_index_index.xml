@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Karol Kowalewski <sensejszyn@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Bon Appétit</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="page.wrapper">
+            <block name="main.content.hero" template="Magento_Theme::html/hero.phtml" before="main.content"/>
+        </referenceContainer>
+        <move element="page.main.title" destination="main.content.hero" before="-"/>
+        <referenceContainer name="main.content">
+            <block class="Magento\Contact\Block\ContactForm" name="contactForm" template="Magento_Contact::form.phtml">
+                <container name="form.additional.info" label="Form Additional Info"/>
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Magento\Contact\ViewModel\UserDataProvider</argument>
+                </arguments>
+            </block>
+            <block name="about" template="Magento_Theme::html/about.phtml" before="-"/>
+        </referenceContainer>
+    </body>
+</page>

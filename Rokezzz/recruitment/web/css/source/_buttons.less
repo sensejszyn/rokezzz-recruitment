@@ -1,0 +1,44 @@
+// /**
+//  * @author Karol Kowalewski <sensejszyn@gmail.com>
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //  Using buttons mixins
+    button,
+    a.action.primary {
+        .lib-css(border-radius, @button__border-radius);
+    }
+
+    body {
+        &:not(._keyfocus) {
+            button {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    a.action.primary {
+        .lib-link-as-button();
+    }
+
+    .action.primary,
+    .action-primary {
+        .lib-button-primary();
+    }
+
+    button {
+        &.secondary {
+            background: transparent;
+            border: 1px solid @secondary__color;
+            color: @secondary__color;
+            width: 100%;
+        }
+    }
+}

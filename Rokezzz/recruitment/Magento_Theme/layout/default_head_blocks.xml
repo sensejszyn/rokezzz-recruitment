@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Karol Kowalewski <sensejszyn@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <remove src="fonts/opensans/light/opensans-300.woff2"/>
+        <remove src="fonts/opensans/regular/opensans-400.woff2"/>
+        <remove src="fonts/opensans/semibold/opensans-600.woff2"/>
+        <remove src="fonts/opensans/bold/opensans-700.woff2"/>
+        <remove src="fonts/Luma-Icons.woff2"/>
+
+        <font src="fonts/AlbertSans/AlbertSans-Light.woff2"/>
+        <font src="fonts/AlbertSans/AlbertSans-Bold.woff2"/>
+        <font src="fonts/Literata/Literata-Regular.woff2"/>
+        <font src="fonts/Literata/Literata-Italic.woff2"/>
+ </head>
+</page>

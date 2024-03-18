@@ -1,0 +1,133 @@
+// /**
+//  * @author Karol Kowalewski <sensejszyn@gmail.com>
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .nav-toggle {
+        .lib-icon-text-hide();
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        display: block;
+        z-index: 5;
+        margin-left: 18px;
+
+        &:before {
+            content: '';
+            opacity: 0;
+            transition: 300ms ease-in-out opacity;
+        }
+
+        .js-nav-opened & {
+            &:before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 5;
+                background: @color-black;
+                opacity: 0.7;
+            }
+        }
+
+        svg {
+           display: block;
+        }
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+        max-width: 280px;
+        bottom: 0;
+        background: @color-white;
+        box-sizing: border-box;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        transition: 300ms ease-in-out transform;
+        transform: translate(-100%,0);
+
+        .js-nav-opened & {
+            transform: translate(0,0);
+        }
+
+        .menu {
+            padding: 30px 0 0;
+            margin: 0 0 0 30px;
+            position: relative;
+
+            &:before{
+                position: absolute;
+                background: @primary__color;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 30px;
+                height: 1px;
+            }
+
+            .category-item {
+                font-family: @font-family-name__second;
+                font-style: italic;
+                font-size: 24px;
+                line-height: 1.5em;
+
+                &.active > a {
+                    color: @secondary__color;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        width: initial;
+        max-width: initial;
+        background: initial;
+        display: flex;
+        align-items: center;
+        transition: 300ms ease-in-out transform;
+        transform: translate(0,0);
+
+        .menu {
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            &:before{
+                display: none;
+            }
+
+            .category-item {
+                font-size: 24px;
+                line-height: 1.5em;
+                margin: 0 12px 0 0;
+
+                a {
+                    color: @color-white;
+                    font-size: 16px;
+                    line-height: 1.5em;
+                    display: block;
+                }
+            }
+        }
+    }
+}

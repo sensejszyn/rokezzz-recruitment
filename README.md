@@ -1,1 +1,1 @@
-# rokezzz-recruitment
+# Rokezzz recruitment task

@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author Karol Kowalewski <sensejszyn@gmail.com>
+ */
+
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+
+$columnsLimit = 1;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+?>
+
+<nav class="nav-menu">
+    <ul class="menu">
+        <?= /* @noEscape */ $_menuHtml?>
+        <?= $block->getChildHtml() ?>
+    </ul>
+</nav>

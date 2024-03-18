@@ -1,0 +1,29 @@
+<?php
+/**
+ * @author Karol Kowalewski <sensejszyn@gmail.com>
+ */
+
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+
+?>
+
+<div class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <span class="hero-pre-title">
+                <?= $block->escapeHtml(__('Bakery')) ?>
+            </span>
+            <?= $this->getChildHtml() ?>
+            <div class="scroll-icon" data-mage-init='{"scroller": {}}'>
+                <div class="scroll-down"></div>
+                <div class="scroll-down-text"><?= $block->escapeHtml(__('scroll down')) ?></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hero-bread">
+    <img src="<?= $this->getViewFileUrl('images/bread.png'); ?>"
+         title="<?= $block->escapeHtml(__('Bakery Bon Appétit')) ?>"/>
+</div>

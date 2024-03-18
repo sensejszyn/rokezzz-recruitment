@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Karol Kowalewski <sensejszyn@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceContainer name="header.panel.wrapper" remove="true"/>
+        <referenceContainer name="header-wrapper">
+            <block name="customer_account_link" template="Magento_Theme::html/header/customer.phtml" before="minicart"/>
+            <block name="nav-toggle" template="Magento_Theme::html/header/nav-toggle.phtml" after="minicart"/>
+        </referenceContainer>
+        <referenceContainer name="compare-link-wrapper" remove="true"/>
+        <move element="catalog.topnav" destination="header-wrapper" before="customer_account_link"/>
+        <referenceBlock name="navigation.sections" remove="true"/>
+        <referenceContainer name="footer" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+    </body>
+</page>
